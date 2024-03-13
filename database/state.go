@@ -22,7 +22,7 @@ func NewStateFromDisk() (*State, error) { // declare a function NewStateFromDisk
 		return nil, err
 	}
 
-	gen, err := loadGenesis(filepath.Join(cwd, "database", "genesis.json"))
+	gen, err := LoadGenesis(filepath.Join(cwd, "database", "genesis.json"))
 	// loadGenesis returns a genesis details(genesis.json) and an error
 	if err != nil {
 		return nil, err

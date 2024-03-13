@@ -10,7 +10,7 @@ type genesis struct {
 }
 
 // loadGenesis returns a genesis and an error, it will give all the details of the genesis block from the genesis.json file
-func loadGenesis(path string) (genesis, error) {
+func LoadGenesis(path string) (genesis, error) {
 	content, err := os.ReadFile(path) // ReadFile reads the file named by filename and returns the contents
 
 	if err != nil { // if error is not nil
